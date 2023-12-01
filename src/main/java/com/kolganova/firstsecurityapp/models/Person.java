@@ -28,5 +28,7 @@ public class Person {
     private Integer yearOfBirth;
     @Column(name = "password")
     private String password;
+    @Column(name = "role")
+    private String role;
 
 }
