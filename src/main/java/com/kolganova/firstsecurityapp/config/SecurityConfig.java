@@ -34,7 +34,10 @@ public class SecurityConfig {
                         .loginPage("/auth/login")
                         .defaultSuccessUrl("/hello", true)
                         .loginProcessingUrl("/process_login")
-                        .failureUrl("/auth/login?error"));
+                        .failureUrl("/auth/login?error"))
+                .logout((logout) -> logout
+                        .logoutUrl("/logout")
+                        .logoutSuccessUrl("/login"));
 
         return http.build();
     }
